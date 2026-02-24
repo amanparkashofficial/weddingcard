@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import floral from "../assets/floral.png";
 import coupleImg from "../assets/couple.png";
+ 
 
 export default function Reception() {
   const containerVariants = {
@@ -21,9 +22,9 @@ export default function Reception() {
   };
 
   return (
-    <section id="reception" className="wedding-section">
+    <section id="reception" className="wedding-section reception-section">
       <motion.div
-        className="wedding-card"
+        className="wedding-card reception-card"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -68,7 +69,7 @@ export default function Reception() {
           </motion.div>
 
           <motion.h2 className="event-date" variants={itemVariants}>
-            13 March 2026
+            15 March 2026
           </motion.h2>
 
           <motion.p className="event-venue" variants={itemVariants}>

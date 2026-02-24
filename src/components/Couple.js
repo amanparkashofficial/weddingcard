@@ -21,6 +21,17 @@ export default function Couple() {
         }}
       >
 
+        {/* Bigger Animated Invite Line */}
+      <motion.p
+        className="invite-line"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        Request the honor of your presence at their wedding celebration
+      </motion.p>
+
         {/* Bride */}
         <motion.div
           className="person"
@@ -77,16 +88,7 @@ export default function Couple() {
 
       </motion.div>
 
-      {/* Bigger Animated Invite Line */}
-      <motion.p
-        className="invite-line"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        Request the honor of your presence at their wedding celebration
-      </motion.p>
+      
 
     </section>
   );

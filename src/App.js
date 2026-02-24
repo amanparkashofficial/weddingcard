@@ -21,7 +21,6 @@ function App() {
           <Navbar />
           <Home />
           <Couple />
-          <Satsang />
           <Haldi />
           <Wedding />
           <Reception />

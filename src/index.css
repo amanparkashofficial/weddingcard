@@ -175,7 +175,7 @@ body {
 .home-section {
   position: relative;
   height: 100vh;              /* force exact screen height */
-  background: #faf7f2;
+  background: linear-gradient(135deg, #fff8f0, #fef1e6); /* soft wedding gradient */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,8 +314,8 @@ body {
 
 .floral-bg {
   position: absolute;
-  width: 240px;
-  height: 280px;
+  width: 200px;
+  height: 250px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -326,7 +326,7 @@ body {
 
 .oval-image {
   width: 200px;
-  height: 260px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50% / 60%;
   border: 5px solid #c6a14a;
@@ -487,21 +487,21 @@ body {
   .invitation-text .with-text { font-size: 16px; }
   .blessing-text { font-size: 18px; }
   .god-image-frame { width: 130px; height: 180px; margin-bottom: 20px; }
-  .couple-row { flex-direction: column; gap: 40px; }
+  .couple-row { flex-direction: column; gap: 10px; }
   .divider { display: none; }
-  .oval-image { width: 180px; height: 240px; }
+  .oval-image { width: 260px; height: 250px; }
   .floral-bg { width: 200px; height: 240px; }
-  .person-name { margin-top: -35px; }
+  .person-name { margin-top: -50px; }
 }
 
 
 .invite-line {
   font-family: "Playfair Display", serif;
-  font-size: 20px;  /* bigger */
-  max-width: 850px;
+  font-size: 22px;  /* bigger */
+  max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #444;
+  color: #825d08;
   font-weight: 500;
 }
 
@@ -547,7 +547,7 @@ body {
 
 .floral-deco img {
   width: 100%;       /* span wider horizontally */
-  max-width: 100px; /* optional: limit max width */
+  max-width: 150px; /* optional: limit max width */
   height: 90px;     /* keep original height proportion */
   object-fit: fill;
 }
@@ -697,7 +697,7 @@ body {
 }
 
 .floral-deco img {
-  width: 100%;
+  width: 150%;
   max-width: 150px; /* ensure it does not overflow */
   height: 70px;
   object-fit: cover;
@@ -766,7 +766,7 @@ body {
     height: 110px;
   }
   .floral-deco img {
-    max-width: 120px;
+    max-width: 150px;
   }
 }
 
@@ -806,8 +806,8 @@ body {
   }
 
   .floral-deco img {
-    max-width: 100px;
-    height: 70px;
+    max-width: 150px;
+    height: 30px;
   }
 
   .card-border-top,
@@ -1009,9 +1009,10 @@ html {
   position: relative;
   background: linear-gradient(
     135deg,
-    #fff4c4 0%,
-    #ffe08a 40%,
-    #f4c430 100%
+    #f7f1f1 20%,
+    #e4af10 200%,
+    #d4a310 150%
+    
   );
   overflow: hidden;
 }
@@ -1055,4 +1056,186 @@ html {
   0% { box-shadow: 0 0 20px rgba(255, 204, 51, 0.4); }
   50% { box-shadow: 0 0 35px rgba(255, 204, 51, 0.7); }
   100% { box-shadow: 0 0 20px rgba(255, 204, 51, 0.4); }
+}
+
+
+/* Wedding Overlay */
+.wedding-festive {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    
+    #faf7f7 50%,
+    #6c222f 70%,
+    #5b0b19 100%
+  );
+
+
+
+  
+}
+
+.wedding-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(107,15,31,0.05), rgba(245,220,180,0.15));
+  z-index: 1;
+}
+
+/* Wedding Card */
+.wedding-card-festive {
+  position: relative;
+  z-index: 2;
+  background: #fdf9f9;
+  width: 90%;
+  max-width: 900px;
+  padding: 50px 40px;
+  border: 8px solid #6a0f1f; /* deep maroon */
+  border-radius: 25px;
+  box-shadow: 0 15px 50px rgba(107, 15, 31, 0.3);
+  text-align: center;
+}
+
+/* Borders */
+.wedding-border {
+  height: 6px;
+  background: linear-gradient(to right, #6a0f1f, #f4d03f, #6a0f1f);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Wedding Image */
+.wedding-image-wrapper {
+  margin: 20px 0;
+}
+
+.wedding-image {
+  width: 160px;
+  border-radius: 12px;
+  /*box-shadow: 0 10px 25px rgba(107, 15, 31, 0.3);*/
+  object-fit: cover;
+}
+
+/* Floral Decoration */
+.floral-deco img {
+  width: 120px;
+  opacity: 0.9;
+}
+
+/* Text Styling */
+.wedding-heading {
+  font-size: 32px;
+  color: #6a0f1f;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(200, 155, 60, 0.3);
+}
+
+.event-schedule span {
+  color: #c89b3c; /* gold accent */
+  font-weight: 600;
+}
+
+.event-venue {
+  color: #4b0b16;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .wedding-card-festive {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .wedding-heading {
+    font-size: 26px;
+  }
+
+  .wedding-image {
+    width: 120px;
+  }
+}
+/* In your CSS file */
+.couple-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #fff8f0, #fef1e6); /* soft wedding gradient */
+}
+
+
+.reception-section {
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  
+  
+  
+  
+  background: linear-gradient(135deg, #fef2f2, #fcd1b0);
+  
+  position: relative;
+}
+
+
+.contact-section {
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  
+  
+  background: linear-gradient(135deg, 
+   #fcd1b0 100%,
+  #fef2f2 200%, 
+  #fcd1b0 100% );
+  
+  
+  position: relative;
+}
+.card-heading {
+  font-size: 2.5rem; /* bigger heading */
+  text-align: center;
+  color: #6d5106;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+}
+.contact-group p {
+  font-size: 2rem; /* bigger text for names and numbers */
+  color: #7d570f;
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+.contact-group p1 {
+  font-size: 2rem; /* bigger text for names and numbers */
+  color: #634308;
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.om-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tap-text {
+  font-size: 1.2rem;
+  color: #800000; /* maroon or any festive color */
+  font-family: "Playfair Display", serif;
+  cursor: pointer;
+  user-select: none;
 }

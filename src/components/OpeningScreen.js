@@ -17,16 +17,27 @@ export default function OpeningScreen({ openInvite }) {
     <div className="opening-container">
       {/* Om Logo */}
       {!startAnimation && (
-        <motion.img
-          src={om}
-          alt="Om"
-          className="om-logo"
-          onClick={handleClick}
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          whileTap={{ scale: 0.95 }}
-        />
+        <div className="om-wrapper">
+          <motion.img
+            src={om}
+            alt="Om"
+            className="om-logo"
+            onClick={handleClick}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            whileTap={{ scale: 0.95 }}
+          />
+          {/* Tap to open text */}
+          <motion.p
+            className="tap-text"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.8 }}
+          >
+            Tap to open
+          </motion.p>
+        </div>
       )}
 
       {/* Welcome Text (center seam) */}

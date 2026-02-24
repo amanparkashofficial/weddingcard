@@ -20,10 +20,39 @@ export default function Wedding() {
     },
   };
 
+  // Curtains animation: slide from center to sides
+  const curtainLeftVariants = {
+    hidden: { x: 0 },
+    show: { x: "-100%", transition: { duration: 1.8, ease: "easeInOut" } },
+  };
+
+  const curtainRightVariants = {
+    hidden: { x: 0 },
+    show: { x: "100%", transition: { duration: 1.8, ease: "easeInOut" } },
+  };
+
   return (
-    <section id="wedding" className="wedding-section">
+    <section id="wedding" className="wedding-section wedding-festive">
+
+      {/* Left Curtain */}
       <motion.div
-        className="wedding-card"
+        className="curtain left-curtain"
+        initial="hidden"
+        animate="show"
+        variants={curtainLeftVariants}
+      />
+
+      {/* Right Curtain */}
+      <motion.div
+        className="curtain right-curtain"
+        initial="hidden"
+        animate="show"
+        variants={curtainRightVariants}
+      />
+
+      {/* Wedding Card */}
+      <motion.div
+        className="wedding-card wedding-card-festive"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -34,10 +63,8 @@ export default function Wedding() {
           <img src={floral} alt="Floral Decoration" />
         </div>
 
-        {/* Top Border */}
-        <div className="card-border-top"></div>
+        <div className="card-border-top wedding-border"></div>
 
-        {/* Wedding Image */}
         <div className="wedding-image-wrapper">
           <motion.img
             src={weddingImg}
@@ -50,7 +77,6 @@ export default function Wedding() {
           />
         </div>
 
-        {/* Content */}
         <motion.div
           className="card-content"
           variants={containerVariants}
@@ -58,7 +84,7 @@ export default function Wedding() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <motion.h1 className="card-heading" variants={itemVariants}>
+          <motion.h1 className="card-heading wedding-heading" variants={itemVariants}>
             Wedding Ceremony
           </motion.h1>
 
@@ -68,7 +94,7 @@ export default function Wedding() {
           </motion.div>
 
           <motion.h2 className="event-date" variants={itemVariants}>
-            12 March 2026
+            14 March 2026
           </motion.h2>
 
           <motion.p className="event-venue" variants={itemVariants}>
@@ -78,8 +104,7 @@ export default function Wedding() {
           </motion.p>
         </motion.div>
 
-        {/* Bottom Border */}
-        <div className="card-border-bottom"></div>
+        <div className="card-border-bottom wedding-border"></div>
       </motion.div>
     </section>
   );

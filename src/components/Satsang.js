@@ -22,6 +22,8 @@ export default function Satsang() {
 
   return (
     <section id="satsang" className="wedding-section">
+      
+      
       <motion.div
         className="wedding-card"
         initial={{ opacity: 0, scale: 0.9 }}

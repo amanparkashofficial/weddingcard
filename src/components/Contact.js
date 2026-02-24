@@ -20,7 +20,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="wedding-section">
+    <section id="contact" className="contact-section">
       <motion.div
         className="wedding-card"
         initial={{ opacity: 0, scale: 0.9 }}
@@ -44,13 +44,12 @@ export default function Contact() {
 
           {/* Bride Side */}
           <motion.div variants={itemVariants} className="contact-group">
-            <h3>Bride Side</h3>
-
-            <p>Prem Chand</p>
-            <p>03333951483</p>
+          
+            <p>Prem Kumar Mankani</p>
+            <p1>03333951483</p1>
 
             <p>Dilip Kumar Mankani</p>
-            <p>0332 8426681</p>
+            <p1>0332 8426681</p1>
           </motion.div>
 
         </motion.div>
