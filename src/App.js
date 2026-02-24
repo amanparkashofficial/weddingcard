@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import OpeningScreen from "./components/OpeningScreen";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Couple from "./components/Couple";
+import Satsang from "./components/Satsang";
+import Haldi from "./components/Haldi";
+import Wedding from "./components/Wedding";
+import Reception from "./components/Reception";
+import Contact from "./components/Contact";
 
 function App() {
+  const [opened, setOpened] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!opened && <OpeningScreen openInvite={() => setOpened(true)} />}
+
+      {opened && (
+        <>
+          <Navbar />
+          <Home />
+          <Couple />
+          <Satsang />
+          <Haldi />
+          <Wedding />
+          <Reception />
+          <Contact />
+        </>
+      )}
+    </>
   );
 }
 
