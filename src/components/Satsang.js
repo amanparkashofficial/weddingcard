@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import god from "../assets/god.jpeg";
-import floral from "../assets/floral.png";
+
 
 export default function Satsang() {
   const containerVariants = {
