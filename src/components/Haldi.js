@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import rangoli from "../assets/HaldiDesign1.jpeg";
+import rangoli from "../assets/haldi.png";
 import floral from "../assets/floral.png";
 
 export default function Haldi() {
@@ -21,9 +21,13 @@ export default function Haldi() {
   };
 
   return (
-    <section id="haldi" className="wedding-section">
+    <section id="haldi" className="wedding-section haldi-section">
+      
+      {/* Festive Overlay */}
+      <div className="haldi-overlay"></div>
+
       <motion.div
-        className="wedding-card"
+        className="wedding-card haldi-card"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -35,15 +39,14 @@ export default function Haldi() {
         </div>
 
         {/* Top Border */}
-        <div className="card-border-top"></div>
+        <div className="card-border-top haldi-border"></div>
 
-        {/* Rotating Rangoli */}
+        {/* Static Rangoli */}
         <div className="rangoli-wrapper">
-          <motion.img
+          <img
             src={rangoli}
             className="rangoli"
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            alt="Haldi Design"
           />
         </div>
 
@@ -55,7 +58,7 @@ export default function Haldi() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <motion.h1 className="card-heading" variants={itemVariants}>
+          <motion.h1 className="card-heading haldi-heading" variants={itemVariants}>
             Haldi Ceremony
           </motion.h1>
 
@@ -76,7 +79,7 @@ export default function Haldi() {
         </motion.div>
 
         {/* Bottom Border */}
-        <div className="card-border-bottom"></div>
+        <div className="card-border-bottom haldi-border"></div>
       </motion.div>
     </section>
   );

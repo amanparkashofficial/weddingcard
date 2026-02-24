@@ -28,7 +28,7 @@ body {
   position: sticky;
   top: 0;
   background: #6a0f1f; /* maroon */
-  padding: 12px 20px;
+  padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
@@ -62,7 +62,7 @@ body {
 
 .bar {
   width: 25px;
-  height: 3px;
+  height: 60px;
   background: #e8d7a5; /* gold */
   transition: all 0.4s ease;
 }
@@ -174,13 +174,13 @@ body {
 /* ============================= */
 .home-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;              /* force exact screen height */
   background: #faf7f2;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+  padding: 0 20px;            /* remove vertical padding */
 }
 
 .home-overlay {
@@ -198,6 +198,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+   width: 100%;
+  margin: 0 auto;
 }
 
 /* Divine God Image Frame - Vertical Oval */
@@ -655,19 +657,7 @@ body {
 
 
 
-/* ============================= */
-/* HOME SECTION – INVITATION RESPONSIVE */
-/* ============================= */
-.home-section {
-  position: relative;
-  min-height: 100vh;
-  background: #faf7f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-}
+
 
 .wedding-card {
   background: #fffdf7;
@@ -937,4 +927,132 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+   padding: 1px 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Desktop center */
+}
+.nav-links.desktop {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+
+  .nav-container {
+    justify-content: space-between; /* left side layout */
+  }
+
+  .nav-links.desktop {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* hamburger left */
+    align-items: center;
+  }
+
+}
+.home-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+
+  .home-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+}
+.mobile-header {
+  display: none;
+  align-items: center;
+  gap: 12px;   /* space between hamburger & welcome */
+}
+@media screen and (max-width: 768px) {
+
+  .mobile-header {
+    display: flex;
+    justify-content: flex-start;   /* LEFT ALIGN */
+  }
+
+  .nav-container {
+    justify-content: flex-start;   /* everything on left */
+  }
+
+  .nav-links.desktop {
+    display: none;
+  }
+
+
+
+
+}
+
+
+
+/* HALDI BACKGROUND */
+.haldi-section {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #fff4c4 0%,
+    #ffe08a 40%,
+    #f4c430 100%
+  );
+  overflow: hidden;
+}
+
+/* Floating festive dots */
+.haldi-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 204, 0, 0.25) 2px, transparent 2px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Haldi Card */
+.haldi-card {
+  background: #fff8dc;
+  border: 8px solid #d4a017;
+  box-shadow: 0 20px 60px rgba(212, 160, 23, 0.35);
+  animation: haldiGlow 3s infinite alternate;
+}
+
+/* Borders */
+.haldi-border {
+  background: linear-gradient(
+    to right,
+    #d4a017,
+    #ffcc33,
+    #c68600
+  );
+  height: 6px;
+}
+
+/* Heading */
+.haldi-heading {
+  color: #b8860b;
+}
+
+/* Glow Animation */
+@keyframes haldiGlow {
+  0% { box-shadow: 0 0 20px rgba(255, 204, 51, 0.4); }
+  50% { box-shadow: 0 0 35px rgba(255, 204, 51, 0.7); }
+  100% { box-shadow: 0 0 20px rgba(255, 204, 51, 0.4); }
 }
