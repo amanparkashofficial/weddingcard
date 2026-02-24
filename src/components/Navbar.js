@@ -9,7 +9,6 @@ export default function Navbar() {
         <div className="nav-links desktop">
           <a href="#home">Home</a>
           <a href="#couple">Couple</a>
-          <a href="#satsang">Satsang</a>
           <a href="#haldi">Haldi</a>
           <a href="#wedding">Wedding</a>
           <a href="#reception">Reception</a>
@@ -30,7 +29,6 @@ export default function Navbar() {
         <div className={`nav-links mobile ${open ? "open" : ""}`}>
           <a href="#home" onClick={() => setOpen(false)}>Home</a>
           <a href="#couple" onClick={() => setOpen(false)}>Couple</a>
-          <a href="#satsang" onClick={() => setOpen(false)}>Satsang</a>
           <a href="#haldi" onClick={() => setOpen(false)}>Haldi</a>
           <a href="#wedding" onClick={() => setOpen(false)}>Wedding</a>
           <a href="#reception" onClick={() => setOpen(false)}>Reception</a>
